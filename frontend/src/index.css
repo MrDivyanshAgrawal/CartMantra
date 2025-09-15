@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+/* CartMantra Custom Styles */
+:root {
+  --primary-blue: #1e40af;
+  --secondary-blue: #3b82f6;
+  --light-blue: #dbeafe;
+  --accent-blue: #60a5fa;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --background-white: #ffffff;
+  --background-light: #f8fafc;
+  --background-blue-tint: #f1f5f9;
+}
+
+body {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #e0f2fe 100%);
+  min-height: 100vh;
+  color: var(--text-dark);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue);
+}
+
+/* CartMantra Logo Styles */
+.cartmantra-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cartmantra-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cartmantra-icon::before {
+  content: "🛒";
+  font-size: 20px;
+  color: white;
+}
+
+.cartmantra-icon::after {
+  content: "ॐ";
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  font-size: 12px;
+  color: #fbbf24;
+}
+
+.cartmantra-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.cartmantra-text .cart {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.cartmantra-text .mantra {
+  font-size: 20px;
+  line-height: 1;
+  margin-top: -2px;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -3px rgba(59, 130, 246, 0.4);
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--light-blue);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Input Styles */
+.input-field {
+  background: white;
+  border: 2px solid var(--light-blue);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: var(--secondary-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--primary-blue);
+}
+
+.text-secondary {
+  color: var(--text-light);
+}
+
+.text-accent {
+  color: var(--accent-blue);
+}
